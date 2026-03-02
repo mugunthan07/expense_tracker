@@ -1,0 +1,55 @@
+{
+  "flutter": {
+    "platforms": {
+      "android": {
+        "default": {
+          "projectId": "expense-tracker-22fb3",
+          "appId": "1:530841353350:android:b7676df6bebc5229412507",
+          "fileOutput": "android/app/google-services.json"
+        }
+      },
+      "ios": {
+        "default": {
+          "projectId": "expense-tracker-22fb3",
+          "appId": "1:530841353350:ios:b8504601d3121550412507",
+          "uploadDebugSymbols": false,
+          "fileOutput": "ios/Runner/GoogleService-Info.plist"
+        }
+      },
+      "macos": {
+        "default": {
+          "projectId": "expense-tracker-22fb3",
+          "appId": "1:530841353350:ios:b8504601d3121550412507",
+          "uploadDebugSymbols": false,
+          "fileOutput": "macos/Runner/GoogleService-Info.plist"
+        }
+      },
+      "dart": {
+        "lib/firebase_options.dart": {
+          "projectId": "expense-tracker-22fb3",
+          "configurations": {
+            "android": "1:530841353350:android:b7676df6bebc5229412507",
+            "ios": "1:530841353350:ios:b8504601d3121550412507",
+            "macos": "1:530841353350:ios:b8504601d3121550412507",
+            "web": "1:530841353350:web:5909a57c00d9f184412507",
+            "windows": "1:530841353350:web:202aeed0aaae6bb2412507"
+          }
+        }
+      }
+    }
+  },
+  "hosting": {
+    "public": "build/web",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
