@@ -24,35 +24,27 @@ class HomeScreen extends ConsumerWidget {
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => const ExpenseFormScreen(),
-            ),
+            MaterialPageRoute(builder: (context) => const ExpenseFormScreen()),
           );
         },
         child: const Icon(Icons.add),
       ),
       body: expenses.when(
         data: (_) {
-          return CustomScrollView(
-            slivers: [
-              const SliverToBoxAdapter(
-                child: Padding(
-                  padding: EdgeInsets.all(12.0),
-                  child: MonthlySummary(),
-                ),
+          return Column(
+            children: [
+              const Padding(
+                padding: EdgeInsets.all(12.0),
+                child: MonthlySummary(),
               ),
-              const SliverToBoxAdapter(
-                child: Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 12),
-                  child: ExpenseFilter(),
-                ),
+              const Padding(
+                padding: EdgeInsets.symmetric(horizontal: 12),
+                child: ExpenseFilter(),
               ),
-              const SliverToBoxAdapter(
-                child: SizedBox(height: 12),
-              ),
-              const SliverFillRemaining(
-                hasScrollBody: true,
-                child: ExpenseList(),
+              const SizedBox(height: 12),
+              const Expanded(
+                child:
+                    ExpenseList(), // Make sure ExpenseList uses ListView internally
               ),
             ],
           );
